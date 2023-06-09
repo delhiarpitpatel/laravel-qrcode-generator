@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QrCodeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('qrcode.create');
+});
+Route::group(['as' => 'qrcode.'], function () {
+    Route::view('/create', 'qrcode.create')->name('create');
+    Route::post('/create', [QrCodeController::class, 'store'])->name('store');
+    Route::get('/{shortCode:code}', [QrCodeController::class, 'view'])->name('view');
 });
