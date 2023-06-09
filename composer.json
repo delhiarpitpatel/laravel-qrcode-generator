@@ -6,11 +6,11 @@
     "license": "MIT",
     "require": {
         "php": "^8.1",
-        "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^10.10",
-        "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8",
-        "simplesoftwareio/simple-qrcode": "~4"
+        "guzzlehttp/guzzle": "v7.7.0",
+        "laravel/framework": "v10.13.5",
+        "laravel/sanctum": "v3.2.5",
+        "laravel/tinker": "v2.8.1",
+        "simplesoftwareio/simple-qrcode": "4.2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
